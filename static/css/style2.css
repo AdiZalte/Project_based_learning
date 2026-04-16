@@ -7,13 +7,24 @@
     --input-text: #ecf0f1;
 }
 
+<<<<<<< HEAD
 body,
 html {
+=======
+body, html {
+>>>>>>> d56704ecbf65ab8303082efa5c38397feccfbac5
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     min-height: 100vh;
+<<<<<<< HEAD
     background-color: var(--background-color);
+=======
+    background-image: url('../images/img.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+>>>>>>> d56704ecbf65ab8303082efa5c38397feccfbac5
     color: var(--text-color);
     display: flex;
     justify-content: center;

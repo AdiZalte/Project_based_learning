@@ -1,12 +1,23 @@
 import numpy as np
+<<<<<<< HEAD
 from flask import Flask, request, render_template
 import pickle
+=======
+import model
+from flask import Flask, request, render_template
+import pickle
+import model1
+>>>>>>> d56704ecbf65ab8303082efa5c38397feccfbac5
 app = Flask(__name__,template_folder="templates")
 model = pickle.load(open('model.pkl', 'rb'))
 model1 = pickle.load(open('model1.pkl','rb'))
 @app.route('/')
 def h():
+<<<<<<< HEAD
     return render_template('home.html')
+=======
+    return render_template('h.html')
+>>>>>>> d56704ecbf65ab8303082efa5c38397feccfbac5
 @app.route('/about')
 def about():
     return render_template('about.html')
@@ -52,7 +63,11 @@ def predict():
     brr = np.asarray(arr,dtype=float)
     output = model.predict([brr])
     p=''
+<<<<<<< HEAD
     if output[0]=='Placed':
+=======
+    if output=='Placed':
+>>>>>>> d56704ecbf65ab8303082efa5c38397feccfbac5
         p='1'
     else:
         p='0'
@@ -67,6 +82,7 @@ def predict():
         k=k[0]+','+k[1]+k[2]+','+k[3]+k[4]+k[5]
     elif l==7:
         k=k[0]+k[1]+','+k[2]+k[3]+','+k[4]+k[5]+k[6]
+<<<<<<< HEAD
     if(output[0]=='Placed'):
         out = f'Congratulations {name} !! You have high chances of getting placed!!!'
         out2= f'Your Excepted Salary will be INR {k} per annum'
@@ -75,6 +91,16 @@ def predict():
         out=f'Sorry {name} !! You have low chances of getting placed.All the best!!!!'
         out2='Improve your skills...'
         return render_template('output.html', output=out,output2=out2)
+=======
+    if(output=='Placed'):
+        out = f'Congratualations {name} !! You have high chances of getting placed!!!'
+        out2= f'Your Excepted Salary will be INR {k} per annum'
+        return render_template('out.html', output=out,output2=out2)
+    else:
+        out=f'Sorry {name} !! You have low chances of getting placed.All the best!!!!'
+        out2='Improve your skills...'
+        return render_template('out.html', output=out,output2=out2)
+>>>>>>> d56704ecbf65ab8303082efa5c38397feccfbac5
      
 
 if __name__ == "__main__":

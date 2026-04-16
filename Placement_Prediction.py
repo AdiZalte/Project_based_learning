@@ -4,7 +4,11 @@ import pickle
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn import preprocessing
+<<<<<<< HEAD
 df = pd.read_csv('Placement_Prediction_data.csv')
+=======
+df = pd.read_csv('data2.csv')
+>>>>>>> d56704ecbf65ab8303082efa5c38397feccfbac5
 df = df.loc[:, ~df.columns.str.contains('^Unnamed')]
 df.fillna(0,inplace=True)
 x=df.drop(['StudentId','PlacementStatus'],axis=1)

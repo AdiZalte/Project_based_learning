@@ -12,7 +12,14 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
+<<<<<<< HEAD
     background-color: var(--background-color);
+=======
+    background-image: url('../images/img.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+>>>>>>> d56704ecbf65ab8303082efa5c38397feccfbac5
     color: var(--text-color);
 }
 

@@ -1,6 +1,15 @@
 Flask
+<<<<<<< HEAD
 scikit-learn
 pandas
 numpy
 matplotlib
 seaborn
+=======
+Scikit-Learn
+Pandas
+Pickle
+Numpy
+matplotlib
+Seaborn
+>>>>>>> d56704ecbf65ab8303082efa5c38397feccfbac5
